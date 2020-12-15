@@ -52,7 +52,9 @@ footer {
   flex-direction: row;
   padding: 0 20px;
 }
-
+.cam-case {
+  text-transform: capitalize;
+}
 .filter-btn {
   height: 20px;
   width: 60px;
@@ -75,8 +77,6 @@ footer {
   border: 0;
   outline: none;
 }
-
-
 
 .card-container {
   display: flex;
@@ -176,10 +176,9 @@ footer a {
   justify-content: center;
 }
 
-
 /* Responsive Styles */
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container-body {
     flex-direction: row;
   }
@@ -199,15 +198,21 @@ footer a {
 
   .card-container {
     max-height: 86vh;
-    overflow-Y: auto;
+    overflow-y: auto;
   }
 
   .no-records {
     margin: 20% 30%;
   }
+
+  .year-filter,
+  .launch-filter,
+  .land-filter {
+    justify-content: left;
+  }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 700px) and (max-width: 1024px) {
   .container-body {
     flex-direction: row;
   }
@@ -227,11 +232,16 @@ footer a {
 
   .card-container {
     max-height: 86vh;
-    overflow-Y: auto;
+    overflow-y: auto;
   }
 
   .no-records {
     margin: 20% 30%;
+  }
+  .year-filter,
+  .launch-filter,
+  .land-filter {
+    justify-content: left;
   }
 }
 
@@ -255,5 +265,10 @@ footer a {
 
   .no-records {
     margin: 20% 20%;
+  }
+  .year-filter,
+  .launch-filter,
+  .land-filter {
+    justify-content: center;
   }
 }
